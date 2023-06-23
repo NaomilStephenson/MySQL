@@ -1,0 +1,57 @@
+CREATE DATABASE IF NOT EXISTS GameStore;
+USE GameStore;
+-- DROP Table Address;
+CREATE TABLE IF NOT EXISTS Address (
+  ID INT PRIMARY KEY AUTO_INCREMENT,
+  HouseName VARCHAR(30) NOT NULL,
+  Street VARCHAR(30) NOT NULL,
+  Street2 VARCHAR(30),
+  Town VARCHAR(20) NOT NULL,
+  County VARCHAR(20),
+  PostCode CHAR(9)
+);
+-- Drop Table Customer;
+CREATE TABLE IF NOT EXISTS Customer (
+  ID INT PRIMARY KEY AUTO_INCREMENT,
+  FirstName VARCHAR(30) NOT NULL,
+  Surname VARCHAR(30),
+  DOB Date,
+  AddressID INT NOT NULL,
+  FOREIGN KEY (AddressID) REFERENCES address(ID),
+  MobNo Char (11),
+  Email VarChar (50)
+);
+-- Drop Table Vendor;
+CREATE TABLE IF NOT EXISTS Vendor (
+  ID INT PRIMARY KEY AUTO_INCREMENT,
+  VendorName VARCHAR(30)
+);
+-- Drop Table Category;
+CREATE TABLE IF NOT EXISTS Category (
+  ID INT PRIMARY KEY AUTO_INCREMENT,
+  Cat VARCHAR(30)
+);
+-- Drop Table ProductType;
+CREATE TABLE IF NOT EXISTS ProductType (
+  ID INT PRIMARY KEY AUTO_INCREMENT,
+  PType CHAR(4)
+);
+-- Drop Table Product;
+CREATE TABLE IF NOT EXISTS Product (
+  ID INT PRIMARY KEY AUTO_INCREMENT,
+  VendorID INT NOT NULL,
+  FOREIGN KEY (VendorID) REFERENCES Vendor(ID),
+  CategoryID INT NOT NULL,
+  FOREIGN KEY (CategoryID) REFERENCES Category(ID),
+  ProductTypeID INT NOT NULL,
+  FOREIGN KEY (ProductTypeID) REFERENCES ProductType(ID),
+  Item VarChar (50) NOT NULL,
+  Cost Float NOT NULL,
+  Price FLOAT NOT NULL
+  );
+  -- Drop Table Staff;
+CREATE TABLE IF NOT EXISTS Staff (
+  ID INT PRIMARY KEY AUTO_INCREMENT,
+  FirstName VARCHAR(30) NOT NULL,
+  Surname VARCHAR(30)
+  );
