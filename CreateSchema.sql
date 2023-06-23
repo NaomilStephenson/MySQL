@@ -56,4 +56,15 @@ CREATE TABLE IF NOT EXISTS Staff (
   FirstName VARCHAR(30) NOT NULL,
   Surname VARCHAR(30)
   );
-
+  -- Drop TABLE Orders;
+CREATE TABLE IF NOT EXISTS Orders (
+  ID INT PRIMARY KEY AUTO_INCREMENT,
+  SalesAssistantID INT NOT NULL,
+  FOREIGN KEY (SalesAssistantID) REFERENCES Staff(ID),
+  OrderDate DATE NOT NULL,
+  CustID INT NOT NULL,
+  FOREIGN KEY (CustID) REFERENCES Customer(ID),
+  ProductID INT NOT NULL,
+  FOREIGN KEY (ProductID) REFERENCES Product(ID),
+  Quantity INT NOt NULL
+  );
