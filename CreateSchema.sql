@@ -55,3 +55,4 @@ CREATE TABLE IF NOT EXISTS Staff (
   FirstName VARCHAR(30) NOT NULL,
   Surname VARCHAR(30)
   );
+
