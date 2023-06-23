@@ -1,6 +1,7 @@
+-- DROP DATABASE GameStore;
 CREATE DATABASE IF NOT EXISTS GameStore;
 USE GameStore;
--- DROP Table Address;
+-- DROP TABLE Address;
 CREATE TABLE IF NOT EXISTS Address (
   ID INT PRIMARY KEY AUTO_INCREMENT,
   HouseName VARCHAR(30) NOT NULL,
@@ -10,7 +11,7 @@ CREATE TABLE IF NOT EXISTS Address (
   County VARCHAR(20),
   PostCode CHAR(9)
 );
--- Drop Table Customer;
+-- Drop TABLE Customer;
 CREATE TABLE IF NOT EXISTS Customer (
   ID INT PRIMARY KEY AUTO_INCREMENT,
   FirstName VARCHAR(30) NOT NULL,
@@ -21,7 +22,7 @@ CREATE TABLE IF NOT EXISTS Customer (
   MobNo Char (11),
   Email VarChar (50)
 );
--- Drop Table Vendor;
+-- Drop TABLE Vendor;
 CREATE TABLE IF NOT EXISTS Vendor (
   ID INT PRIMARY KEY AUTO_INCREMENT,
   VendorName VARCHAR(30)
@@ -31,12 +32,12 @@ CREATE TABLE IF NOT EXISTS Category (
   ID INT PRIMARY KEY AUTO_INCREMENT,
   Cat VARCHAR(30)
 );
--- Drop Table ProductType;
+-- Drop TABLE ProductType;
 CREATE TABLE IF NOT EXISTS ProductType (
   ID INT PRIMARY KEY AUTO_INCREMENT,
   PType CHAR(4)
 );
--- Drop Table Product;
+-- Drop TABLE Product;
 CREATE TABLE IF NOT EXISTS Product (
   ID INT PRIMARY KEY AUTO_INCREMENT,
   VendorID INT NOT NULL,
@@ -49,7 +50,7 @@ CREATE TABLE IF NOT EXISTS Product (
   Cost Float NOT NULL,
   Price FLOAT NOT NULL
   );
-  -- Drop Table Staff;
+  -- Drop TABLE Staff;
 CREATE TABLE IF NOT EXISTS Staff (
   ID INT PRIMARY KEY AUTO_INCREMENT,
   FirstName VARCHAR(30) NOT NULL,
