@@ -49,9 +49,3 @@ CREATE TABLE IF NOT EXISTS Product (
   Cost Float NOT NULL,
   Price FLOAT NOT NULL
   );
-  -- Drop Table Staff;
-CREATE TABLE IF NOT EXISTS Staff (
-  ID INT PRIMARY KEY AUTO_INCREMENT,
-  FirstName VARCHAR(30) NOT NULL,
-  Surname VARCHAR(30)
-  );
