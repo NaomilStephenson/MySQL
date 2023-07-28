@@ -23,3 +23,6 @@ USE GameStore;
 -- SELECT COUNT(*) FROM Customer;
 -- SELECT substr(name,5,1) from Customer; -- returns 1 value from array position 2 within string chrisTopher
 -- SELECT substr(name,0,3) from Customer; -- returns 3 values from array position from 0 within string CHRistopher
+-- > LPAD(name,10,'+') > (pads out the field to length of 10 from the left with a character '+')
+-- > RPAD(name,8,'-') > (pads out the field length of 8 from the right with a character '-')
+--  
