@@ -20,3 +20,6 @@ USE GameStore;
 -- SELECT * FROM Customer ORDER BY DOB DESC;
 -- SELECT * FROM Customer ORDER BY Surname ASC;
 -- (SELECT * FROM Product ORDER BY Price ASC LIMIT 5) ORDER by PRICE DESC;
+-- SELECT COUNT(*) FROM Customer;
+-- SELECT substr(name,5,1) from Customer; -- returns 1 value from array position 2 within string chrisTopher
+-- SELECT substr(name,0,3) from Customer; -- returns 3 values from array position from 0 within string CHRistopher
